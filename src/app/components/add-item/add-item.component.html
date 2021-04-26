@@ -1,0 +1,34 @@
+<form [formGroup]="form" (ngSubmit)="save($event)">
+  <p>
+    Tipo: <select formControlName="type">
+      <option value="Manga">Manga</option>
+      <option value="Anime">Anime</option>
+      <option value="Comic">Comic</option>
+      <option value="Pelicula" selected>Pelicula</option>
+      <option value="Serie">Serie</option>
+    </select>
+  </p>
+  <p>
+    Nombre: <input type="text" formControlName="name">
+  </p>
+  <p>
+    Creador: <input type="text" formControlName="creator">
+  </p>
+  <p>
+    Capitulo: <input type="number" formControlName="chapter">
+  </p>
+  <p>
+    Temporada: <input type="number" formControlName="season">
+  </p>
+  <p>
+    Estado: <select formControlName="state">
+      <option value="Pendiente">Pendiente</option>
+      <option value="Viendo">Viendo</option>
+      <option value="Terminada">Terminada</option>
+    </select>
+  </p>
+  <p>
+    Saga: <input type="text" formControlName="saga">
+  </p>
+  <button type="submit">Guardar</button>
+</form>

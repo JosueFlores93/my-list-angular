@@ -1,0 +1,23 @@
+<div class="card"  *ngFor="let item of items">
+  <div class="card-body">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-1">
+        <span *ngIf="item.type == 'Manga'" class="fas fa-book-open"></span>
+        <span *ngIf="item.type == 'Anime'" class="fas fa-user-ninja"></span>
+        <span *ngIf="item.type == 'Comic'" class="fas fa-mask"></span>
+        <span *ngIf="item.type == 'Pelicula'" class="fas fa-film"></span>
+        <span *ngIf="item.type == 'Serie'" class="fas fa-tv"></span>
+      </div>
+      <div class="col-8">
+        <h6 *ngIf="item.saga" class="card-subtitle text-muted">{{item.saga}}</h6>
+        <h5 class="card-title">{{item.name}}</h5>
+      </div>
+      <div class="col-1">
+        <span *ngIf="item.state == 'Pendiente'" class="fas fa-eye" style="color:gray"></span>
+        <span *ngIf="item.state == 'Viendo'" class="fas fa-eye" style="color:blue"></span>
+        <span *ngIf="item.state == 'Terminada'" class="fas fa-eye" style="color:green"></span>
+      </div>
+      <div class="col-2"><h5 class="card-tittle" *ngIf="item.chapter">{{item.season}}x{{item.chapter}}</h5></div>
+    </div>
+  </div>
+</div>
